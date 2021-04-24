@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <van-button type="primary" bindtap="bindPicker">按钮</van-button>
+ <!-- <van-picker columns="{{ columns }}" bind:change="onChange" /> -->
+  <!-- <block ew wx:if="{{isPicker}}" class="picker">
+    <text>{{isPicker}}222</text>
+    </block>
+    <block wx:else>
+      <text>{{isPicker}}111</text>
+    </block> -->
+      <!-- 四级联动代码 -->
+  <view class="section">
+    <view class="section__title">多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker" style='font-size:24rpx'>
+        当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}，{{multiArray[3][multiIndex[3]]}}
+      </view>
+    </picker>
+  </view>
+
+</view>
